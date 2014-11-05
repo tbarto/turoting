@@ -15,3 +15,26 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+/*
+|--------------------------------------------------------------------------
+| Sessions/Login Routes - Tom/20141105
+|--------------------------------------------------------------------------
+|
+| routes for logging in and creating a session
+|
+*/
+Route::get('login','SessionsController@create');
+Route::get('logout','SessionsController@destroy');
+Route::resource('sessions','SessionsController', array('only'=>array('create','store','destroy')));
+
+/*
+|--------------------------------------------------------------------------
+| Dashboard Routes - Tom/20141105
+|--------------------------------------------------------------------------
+|
+| Routes for accessing user functions
+|
+*/
+Route::get('dashboard','UsersController@show');
+Route::resource('users','UsersController');

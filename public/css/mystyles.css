@@ -1,0 +1,24 @@
+/*
+|--------------------------------------------------------------------------
+| Login form css - Tom/date
+|--------------------------------------------------------------------------
+|
+| This css will be applied to the login form
+|
+*/
+
+body { 
+ background: url('../images/clouds.jpg') no-repeat center center fixed; 
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+
+.panel-default {
+ opacity: 0.9;
+ margin-top:30px;
+}
+.form-group.last {
+ margin-bottom:0px;
+}
