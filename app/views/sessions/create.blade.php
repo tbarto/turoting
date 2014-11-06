@@ -1,8 +1,9 @@
 @extends('layouts.master')
 
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-
-{{ HTML::style('css/mystyles.css') }}
+@section('css')
+{{ HTML::style("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css")}}
+{{ HTML::style('css/login/mystyles.css') }}
+@stop
 
 @section('content')
 <div class="container">
@@ -13,11 +14,15 @@
 
                 </div>
                 <div class="panel-body">
+                    @if(Session::has('message'))
+                        <p class = "alert {{Session::get('alert-class') }}"> {{Session::get('message')}}</p>
+                    @endif
+
                     {{Form::open(array('route'=>'sessions.store','class'=>'form-horizontal', 'role'=>'form'))}}
                         <div class="form-group">
                             <label for="useremail" class="col-sm-3 control-label">Email</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="useremail" id="useremail" placeholder="Email" required="">
+                                <input type="email" class="form-control" name="useremail" id="useremail" placeholder="Email" required="">
                             </div>
                         </div>
                         <div class="form-group">

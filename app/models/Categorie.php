@@ -1,5 +1,6 @@
 <?php
 
 class Categorie extends \Eloquent {
-	protected $fillable = [];
+	protected $fillable = ['name'];
+	protected $table = 'categories';
 }

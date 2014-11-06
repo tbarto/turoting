@@ -39,7 +39,10 @@ class SessionsController extends \BaseController {
 			]);
 
 		if ($attempt) return Redirect::to('/dashboard');
-		else return Redirect::to('/login')->withInput();
+		else return Redirect::to('/login')
+			->withInput()
+			->with('message','unable to login')
+			->with('alert-class','alert-danger');
 
 	}
 

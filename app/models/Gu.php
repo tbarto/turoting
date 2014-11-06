@@ -1,5 +1,6 @@
 <?php
 
 class Gu extends \Eloquent {
-	protected $fillable = [];
+	protected $fillable = ['name','lat','lng','citie_id'];
+	protected $table = 'gus';
 }

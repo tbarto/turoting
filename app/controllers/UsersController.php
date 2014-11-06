@@ -49,11 +49,11 @@ class UsersController extends \BaseController {
 	}
 
 	/**
-	 * Display the specified resource.
-	 * GET /nerds/{id}
+	 * Tom/20141105
+	 * show the logged in user's dashboard
 	 *
-	 * @param  int  $id
-	 * @return Response
+	 * @param param
+	 * @return return
 	 */
 	public function show()
 	{
