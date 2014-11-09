@@ -36,5 +36,12 @@ Route::resource('sessions','SessionsController', array('only'=>array('create','s
 | Routes for accessing user functions
 |
 */
+Route::get('dashboard/search','DashboardController@search');
+Route::get('dashboard/profile','DashboardController@profile');
+Route::get('dashboard/messages','DashboardController@messages');
+
 Route::get('dashboard','UsersController@show');
 Route::resource('users','UsersController');
+
+Route::get('search/results','SearchController@results');
+Route::get('api/dropdown/{table}','ApiController@dropdown');

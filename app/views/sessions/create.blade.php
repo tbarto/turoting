@@ -2,7 +2,7 @@
 
 @section('css')
 {{ HTML::style("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css")}}
-{{ HTML::style('css/login/mystyles.css') }}
+{{ HTML::style('/css/login/mystyles.css') }}
 @stop
 
 @section('content')

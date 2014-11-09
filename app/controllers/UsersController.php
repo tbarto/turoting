@@ -1,13 +1,15 @@
 <?php
-
+/*
+|--------------------------------------------------------------------------
+| Users Controller - Tom/20141109
+|--------------------------------------------------------------------------
+|
+| Controller for user functions
+|
+*/
 class UsersController extends \BaseController {
 
-	/**
-	 * Display a listing of the resource.
-	 * GET /nerds
-	 *
-	 * @return Response
-	 */
+	
 	/**
 	 * Tom/20141105
 	 * constructor for class
@@ -57,11 +59,15 @@ class UsersController extends \BaseController {
 	 */
 	public function show()
 	{
+		//a.k.a. "dashboard"
 		// get the user
 		$id = Auth::id();
-		$user = User::find($id);
-				
-		// show the view and pass the nerd to it
+		//$user = User::with('profiles')->where('id','=',$id)->get();
+		
+		$user = User::with('profiles','received_messages')->find($id);
+		
+			
+		// show the view and pass the user to it
 		return View::make('users.show')->with('user', $user);
 		
 	}
@@ -103,5 +109,12 @@ class UsersController extends \BaseController {
 	{
 	
 	}
-
+	/**
+	 * Tom/20141108
+	 * get a users messages
+	 * return a view with messages users.messages
+	 * @param param
+	 * @return return
+	 */
+	
 }
