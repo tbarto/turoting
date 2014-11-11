@@ -13,13 +13,17 @@ class DashboardController extends \BaseController {
 	 * gets all messages of a user
 	 *
 	 * @param none
-	 * @return (html) formatted list of messages 
+	 * @return Response (html) formatted list of messages 
 	 */
 	public function messages(){
-		$messages = Message::with('sender')->where('user_id','=',Auth::id())->get();
-		
-		$html =  View::make('dashboard.messages')->with('messages',$messages)->render();
-        
+		$messages = Message::with('sender')
+			->where('user_id','=',Auth::id())
+			->get();
+
+		$html =  View::make('dashboard.messages')
+			->with('messages',$messages)
+			->render();
+
         return Response::make($html);
 	}
 
@@ -28,11 +32,19 @@ class DashboardController extends \BaseController {
 	 * gets a users profile
 	 * 
 	 * @param none
-	 * @return (html) profile of user
+	 * @return Response (html) profile of user
 	 */
 	public function profile(){
-		$profile = Profile::with('cities','gus','dongs')->where('user_id','=',Auth::id())->first();
-		$html = View::make('dashboard.profile')->with('profile',$profile)->render();
+		$profile = Profile::with('cities','gus','dongs')
+			->where('user_id','=',Auth::id())
+			->first();
+
+		$html = View::make('dashboard.profile',array(
+			'profile'=>$profile))
+			->render();
+			//->with('profile',$profile)
+			
+
 		return Response::make($html);
 	}
 
@@ -41,7 +53,7 @@ class DashboardController extends \BaseController {
 	 * display search form
 	 *
 	 * @param none
-	 * @return (html) form with input boxes for Job and Location
+	 * @return Response (html) form with input boxes for Job and Location
 	 */
 	public function search(){
 		$categories = Categorie::all();

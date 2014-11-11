@@ -28,9 +28,6 @@
 			    	@endforeach
 				</select>
 				</br>
-
-
-                
                 <label for='gu'>Gu</label>
                 <select id="gu" data-target="#dong" data-url="{{ url('api/dropdown',array('gus')) }}"name="gu" class = 'form-control ajaxDropdown'>
                     <option>Please choose a city first</option>

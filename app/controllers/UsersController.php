@@ -64,11 +64,11 @@ class UsersController extends \BaseController {
 		$id = Auth::id();
 		//$user = User::with('profiles')->where('id','=',$id)->get();
 		
-		$user = User::with('profiles','received_messages')->find($id);
+		//$user = User::with('profiles','received_messages')->find($id);
 		
 			
 		// show the view and pass the user to it
-		return View::make('users.show')->with('user', $user);
+		return View::make('users.show');//->with('user', $user);
 		
 	}
 

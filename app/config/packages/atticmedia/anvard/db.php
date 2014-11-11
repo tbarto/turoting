@@ -10,7 +10,7 @@ return array(
     'userprofiles' => 'profiles',
 
     /* The belongsTo name for the user of a given profile */
-    'profileuser' => 'user',
+    'profileuser' => 'username',
 
     /* The name of the users table */
     'userstable' => 'users',
