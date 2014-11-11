@@ -1,10 +1,8 @@
 <?php
 return array(
 
-    //'base_url' => URL::route(Config::get('anvard::routes.login')),
-    //'base_url' => URL::route(Config::get('anvard::routes.login')),
-    'base_url'   => 'http://localhost/turoting/public/login',
-    
+    // 'base_url' => URL::route(Config::get('anvard::routes.login')),
+    // 
     'providers' => array (
 
         "Google" => array (
@@ -15,17 +13,17 @@ return array(
 
         'Facebook' => array (
             'enabled' => true,
-            'keys'    => array ( 'id' => '381277452024570', 'secret' => '49a9f7d2822e5d003db42b2341895090' ),
+            'keys'    => array ( 'id' => '1497838613816654', 'secret' => '3a9a7cef5121598907caef728cd4c927' ),
             "scope"   => "email, user_about_me, user_birthday, user_hometown, user_website, offline_access, read_stream, publish_stream, read_friendlists", // optional
         ),
 
         'Twitter' => array (
             'enabled' => true,
-            'keys'    => array ( 'key' => 'nTRlHjc1ixhVYvXTVz4kRkKsb', 'secret' => 'IXBYOyIg0N6Ioo6OnStEfwKuMd6qC8ZsQdPIibVu3J8vpG8QK9' )
+            'keys'    => array ( 'key' => 'NOubEZPWg2BrfCKn8VArsVHKU', 'secret' => '9TClPsFbY82skvhQrjluHd2g5Vo3G0EutAMpWacCTAaulRUQ2T' )
         ),
 
         'LinkedIn' => array (
-            'enabled' => true,
+            'enabled' => false,
             'keys'    => array ( 'key' => '', 'secret' => '' )
         ),
     )

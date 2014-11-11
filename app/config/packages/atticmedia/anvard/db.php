@@ -30,7 +30,7 @@ return array(
 
     /* Rules to override User saving validation (e.g. with Ardent models), for example the password.  Set to NULL to use the default validation rules. */
     'userrules' => array(
-        //'password' => NULL,
+        'password' => NULL,
     ),
 
     /* Specific things to set on new (unsaved) user models, provide a callable if you wish */
