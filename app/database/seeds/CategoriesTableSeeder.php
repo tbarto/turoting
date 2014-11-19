@@ -4,10 +4,17 @@ class CategoriesTableSeeder extends Seeder {
 
 	public function run(){
 
-	Eloquent::unguard();
-
-	Categorie::create([
-		'name'=>'Teacher'
+		Eloquent::unguard();
+		/*
+		|--------------------------------------------------------------------------
+		| category samples - david/20141114
+		|--------------------------------------------------------------------------
+		|
+		| add more sample here
+		|
+		*/
+		Categorie::create([
+			'name'=>'Teacher'
 		]);
 	}
 

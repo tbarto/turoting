@@ -3,7 +3,7 @@
 // Composer: "fzaninotto/faker": "v1.3.0"
 use Faker\Factory as Faker;
 
-class UsersTableSeeder extends Seeder {
+class ReviewsTableSeeder extends Seeder {
 
 	public function run()
 	{
@@ -11,21 +11,20 @@ class UsersTableSeeder extends Seeder {
 		Eloquent::unguard();
 		/*
 		|--------------------------------------------------------------------------
-		| user sample - david/20141114
+		| Reviews sample - david/20141114
 		|--------------------------------------------------------------------------
 		|
 		| add more sample here
 		|
 		*/
-		foreach(range(1, 25) as $index)
+		foreach (range(1, 10) as $index) 
 		{
-			User::create([
-				'username' => $faker->userName,
-    			'email' => $faker->email,
-    			'password' => Hash::make('test'),
-    			'confirmed' => 1
+			Review::create([
+	    		'content'=>$faker->text($maxNbChars = 200),
+	    		'score' => $faker->numberBetween($min= 1,$max=5),
+	    		'created_at'=>time(),
+	    		'updated_at'=>time()
 			]);
 		}
 	}
-
 }

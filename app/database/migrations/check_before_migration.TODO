@@ -1,0 +1,15 @@
+Check before migration: 
+  Foreign Keys generally require InnoDb, so set your default engine, or explicitly specify:
+  ☐ $table->engine = 'InnoDB';
+
+ Foreign keys require the referenced table to exist.:
+  ☐ Make sure the referenced table is created in an earlier migration, prior to creating the key. Consider creating the keys in a separate migration to be sure.
+
+ Foreign Keys require the data type to be congruent.:
+  ☐ Check whether the referenced field is the same type, whether its signed or unsigned, whether it's length is the same (or less).
+
+If you are switching between hand coding migrations, and using generators, make sure you check the id type you are using.: 
+  ☐ Artisan uses increments() by default but Jeffrey Way appears to prefer integer('id', true).
+
+http://stackoverflow.com/questions/11894250/general-error-1005-cant-create-table-using-laravel-schema-build-and-foreign
+--- ✄ -----------------------

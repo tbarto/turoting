@@ -9,6 +9,14 @@ class MessagesTableSeeder extends Seeder {
 	{
 		$faker = Faker::create();
 		Eloquent::unguard();
+		/*
+		|--------------------------------------------------------------------------
+		| message sample - david/20141114
+		|--------------------------------------------------------------------------
+		|
+		| add more sample here
+		| 
+		*/
 		foreach(range(1, 100) as $index)
 		{
 			Message::create([

@@ -55,7 +55,10 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'tutor',
+			/*
+			 * change database name to turoting, david/20141113
+			 */
+			'database'  => 'turoting',
 			'username'  => 'root',
 			'password'  => 'root',
 			'charset'   => 'utf8',

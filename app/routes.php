@@ -24,9 +24,9 @@ Route::get('/', function()
 | routes for logging in and creating a session
 |
 */
-Route::get('login','SessionsController@create');
-Route::get('logout','SessionsController@destroy');
-Route::resource('sessions','SessionsController', array('only'=>array('create','store','destroy')));
+Route::get('login','LoginController@index');
+Route::get('logout','LoginController@destroy');
+Route::resource('sessions','LoginController', array('only'=>array('create','store','destroy')));
 
 /*
 |--------------------------------------------------------------------------
@@ -39,9 +39,8 @@ Route::resource('sessions','SessionsController', array('only'=>array('create','s
 Route::get('dashboard/search','DashboardController@search');
 Route::get('dashboard/profile','DashboardController@profile');
 Route::get('dashboard/messages','DashboardController@messages');
+Route::get('dashboard','DashboardController@index');
+// Route::resource('users','DashboardController');
 
-Route::get('dashboard','UsersController@show');
-Route::resource('users','UsersController');
-
-Route::get('search/results','SearchController@results');
+Route::get('dashboard/results','DashboardController@results');
 Route::get('api/dropdown/{table}','ApiController@dropdown');

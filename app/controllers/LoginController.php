@@ -7,7 +7,7 @@
 | Creates sessions for logging in
 |
 */
-class SessionsController extends \BaseController {
+class LoginController extends \BaseController {
 
 
 	/**
@@ -16,9 +16,9 @@ class SessionsController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function index()
 	{
-		return View::make('sessions.create');
+		return View::make('login.index');
 	}
 
 	/**
@@ -34,7 +34,15 @@ class SessionsController extends \BaseController {
 		
 
 		$attempt=Auth::attempt([
-			'email'=> $input['useremail'],
+			/*
+			|--------------------------------------------------------------------------
+			| useremail to username - david/20141114
+			|--------------------------------------------------------------------------
+			|
+			| change name
+			|
+			*/
+			'email'=> $input['username'],
 			'password'=>$input['password']
 			]);
 
@@ -42,7 +50,15 @@ class SessionsController extends \BaseController {
 		else return Redirect::to('/login')
 			->withInput()
 			->with('message','unable to login')
-			->with('alert-class','alert-danger');
+			/*
+			|--------------------------------------------------------------------------
+			| alert to help-block - david/20141114
+			|--------------------------------------------------------------------------
+			|
+			| simple alert
+			|
+			*/
+			->with('alert-class','help-block');
 
 	}
 

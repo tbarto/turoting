@@ -9,6 +9,14 @@ class ProfilesTableSeeder extends Seeder {
 	{
 		$faker = Faker::create();
 		Eloquent::unguard();
+		/*
+		|--------------------------------------------------------------------------
+		| profile sample - david/20141114
+		|--------------------------------------------------------------------------
+		|
+		| add more sample here
+		|
+		*/
 		foreach(range(1, 25) as $index)
 		{
 			//set name for firstName and displayName
