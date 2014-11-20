@@ -1,17 +1,19 @@
-
-{{ Form::open(array('id'=> 'searchForm', 'method'=>'get', 'role'=>'form')) }}
+{{ Form::open( array( 'id'=> 'searchForm', 'method'=>'get', 'role'=>'form', 'data-target' => URL::route('result') ) ) }}
             <div class="form-group">
                 
                 <label for='category'>Select a category</label>
+
                 <select data-target='#job' data-url="{{ url('api/dropdown',array('categories')) }}" id='category' class = 'form-control ajaxDropdown'>
 			    	<option selected disabled>Please Select</option>
 			    	@foreach($categories as $category)
 			    		<option value="{{ $category->id }}">{{ $category->name }}</option>
 			    	@endforeach
 				</select>
+				
 				</br>
                 
                 <label for='job'>Jobs</label>
+
                 <select id="job" name="job" class = 'form-control'>
                     <option>Please choose a category first</option>
                 </select>
@@ -38,5 +40,8 @@
                     <option>Please choose a gu first</option>
                 </select>
             </div>
-{{Form::submit('Go',array('class' => 'btn btn-primary'))}}
+{{ Form::submit('Go', array( 'class' => 'btn btn-primary' ) ) }}
 {{ Form::close()}}
+<script>
+	dropdown();
+</script>

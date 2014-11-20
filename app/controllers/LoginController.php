@@ -1,10 +1,10 @@
 <?php
 /*
 |--------------------------------------------------------------------------
-| Sessions Controller - Tom/20141105
+| Login Controller - Tom/20141105
 |--------------------------------------------------------------------------
 |
-| Creates sessions for logging in
+| Creates login
 |
 */
 class LoginController extends \BaseController {
@@ -12,7 +12,7 @@ class LoginController extends \BaseController {
 
 	/**
 	 * Show the form for creating a new resource.
-	 * GET /sessions/create
+	 * GET /login/index
 	 *
 	 * @return Response
 	 */
@@ -23,7 +23,7 @@ class LoginController extends \BaseController {
 
 	/**
 	 * Store a newly created resource in storage.
-	 * POST /sessions
+	 * POST /login
 	 *
 	 * @return Response
 	 */
@@ -65,7 +65,7 @@ class LoginController extends \BaseController {
 	
 	/**
 	 * Remove the specified resource from storage.
-	 * DELETE /sessions/{id}
+	 * DELETE /login/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response

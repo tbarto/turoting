@@ -24,9 +24,8 @@ Route::get('/', function()
 | routes for logging in and creating a session
 |
 */
-Route::get('login','LoginController@index');
-Route::get('logout','LoginController@destroy');
-Route::resource('sessions','LoginController', array('only'=>array('create','store','destroy')));
+Route::resource('login','LoginController', array('only'=>array('index', 'create','store') ) );
+Route::get('logout', array( 'as' => 'logout','uses' => 'LoginController@destroy') );
 
 /*
 |--------------------------------------------------------------------------
@@ -36,11 +35,10 @@ Route::resource('sessions','LoginController', array('only'=>array('create','stor
 | Routes for accessing user functions
 |
 */
-Route::get('dashboard/search','DashboardController@search');
-Route::get('dashboard/profile','DashboardController@profile');
-Route::get('dashboard/messages','DashboardController@messages');
-Route::get('dashboard','DashboardController@index');
-// Route::resource('users','DashboardController');
+Route::get('dashboard', array( 'as' => 'dashboard','uses' => 'DashboardController@index') );
+Route::get('dashboard/profile', array( 'as' => 'profile', 'uses' => 'ProfilesController@profile') );
+Route::get('dashboard/messages', array( 'as' => 'message', 'uses' => 'MessagesController@messages') );
+Route::get('dashboard/search', array( 'as' => 'search','uses' => 'SearchController@search') );
+Route::get('dashboard/results', array( 'as' => 'result','uses' => 'SearchController@results') );
 
-Route::get('dashboard/results','DashboardController@results');
 Route::get('api/dropdown/{table}','ApiController@dropdown');

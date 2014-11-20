@@ -1,4 +1,4 @@
 <div id="again">
-	<a href="#search" data-url="{{url('dashboard/search')}}">search again</a>
+	<a href="#search" data-url="{{URL::route('search')}}">search again</a>
 </div>
 <h1>{{ $data }} </h1>

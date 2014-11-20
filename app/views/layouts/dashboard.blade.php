@@ -16,7 +16,7 @@
 	</head>
     <body>
 		<header class="row">
-			@include('includes.header-test')
+			@include('includes.header')
 		</header>
 			
         <div id="main" class="row">
