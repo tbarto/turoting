@@ -6,39 +6,58 @@
 | Navigation, logo, etc
 |
 --}}
-<div class='container'>
-	<div class="container-fluid">
-		<ul class="nav nav-tabs tabs-up" id="menu">
-			<li class='active'>
-				<a href="#profile" data-url="{{ URL::route('profile') }}" class="media_node span" id="profile_tab" data-toggle="tabajax" rel="tooltip"> Profile </a>
-			</li>
-			<li>
-				<a href="#messages" data-url="{{ URL::route('message') }}" class="media_node span" id="messages_tab" data-toggle="tabajax" rel="tooltip"> Messages </a>
-			</li>
+<div class="col-md-8 col-md-offset-2">
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Brand</a>
+			</div>
 
-			{{-- 
-			<li>
-				<a href="#contacts" data-url="{{ URL::route('contact') }}" class="media_node span" id="contacts_tab" data-toggle="tabajax" rel="tooltip"> Contacts </a>
-			</li>
-				--}}
-
-			<li>
-				<a href="#search" data-url="{{ URL::route('search') }}" class="media_node span" id="search_tab" data-toggle="tabajax" rel="tooltip"> Search </a>
-			</li>
-		</ul>
-		<nav class='navbar navbar-default'>
-			<ul class="nav  pull-right">
-				<li>
-					<a href="{{ URL::route('logout') }}">logout</a>
-				</li>
-			</ul>
-		</nav>
-	</div>
-
-	<div class="tab-content">
-		<div class="tab-pane active" id="profile"></div>
-		<div class="tab-pane" id="messages"></div>
-		<div class="tab-pane" id="contacts"></div>
-		<div class="tab-pane" id="search"></div>
-	</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-nav-menu">
+					<li class='active'>
+						<a href="#profile" data-url="{{ URL::route('profile') }}" id="profile_tab">Profile</a>
+					</li>
+					<li>
+						<a href="#messages" data-url="{{ URL::route('message') }}" id="messages_tab">Messages</a>
+					</li>
+					<li>
+						<a href="#posts" data-url="{{ URL::route('post') }}" id="contacts_tab">Posts</a>
+					</li>
+					<li>
+						<a href="#search" data-url="{{ URL::route('search') }}" id="search_tab">Search</a>
+					</li>
+				</ul>
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="{{ URL::route('logout') }}">logout</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
 </div>

@@ -20,7 +20,7 @@
 | add style HTML::style
 |
 --}}
-{{ HTML::style("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css")}}
+{{ HTML::style("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")}}
 {{ HTML::style('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css')}}
 {{ HTML::style('/css/login/style.css') }}
 {{ HTML::style('/css/footer/style.css') }}
@@ -34,4 +34,4 @@
 |
 --}}
 {{ HTML::script('//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js') }}
-{{ HTML::script('https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js') }}
+{{ HTML::script("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js") }}

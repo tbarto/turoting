@@ -38,6 +38,7 @@ Route::get('logout', array( 'as' => 'logout','uses' => 'LoginController@destroy'
 Route::get('dashboard', array( 'as' => 'dashboard','uses' => 'DashboardController@index') );
 Route::get('dashboard/profile', array( 'as' => 'profile', 'uses' => 'ProfilesController@profile') );
 Route::get('dashboard/messages', array( 'as' => 'message', 'uses' => 'MessagesController@messages') );
+Route::get('dashboard/posts', array( 'as' => 'post', 'uses' => 'PostsController@index') );
 Route::get('dashboard/search', array( 'as' => 'search','uses' => 'SearchController@search') );
 Route::get('dashboard/results', array( 'as' => 'result','uses' => 'SearchController@results') );
 
