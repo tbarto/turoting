@@ -17,6 +17,12 @@ class UsersTableSeeder extends Seeder {
 		| add more sample here
 		|
 		*/
+		User::create([
+				'username' => 'TomBarto',
+    			'email' => 'tombarto@hotmail.com',
+    			'password' => Hash::make('test'),
+    			'confirmed' => 1
+			]);
 		foreach(range(1, 25) as $index)
 		{
 			User::create([
