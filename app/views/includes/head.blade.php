@@ -24,7 +24,7 @@
 {{ HTML::style('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css')}}
 {{ HTML::style('/css/login/style.css') }}
 {{ HTML::style('/css/footer/style.css') }}
-
+{{ HTML::style('/css/modalWindow/style.css') }}
 {{--
 |--------------------------------------------------------------------------
 | JS for all page - david/20141118
@@ -35,3 +35,4 @@
 --}}
 {{ HTML::script('//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js') }}
 {{ HTML::script("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js") }}
+{{ HTML::script("https://maps.googleapis.com/maps/api/js?v=3.exp&language=ko") }}

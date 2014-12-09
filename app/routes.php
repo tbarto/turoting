@@ -41,5 +41,9 @@ Route::get('dashboard/messages', array( 'as' => 'message', 'uses' => 'MessagesCo
 Route::get('dashboard/posts', array( 'as' => 'post', 'uses' => 'PostsController@index') );
 Route::get('dashboard/search', array( 'as' => 'search','uses' => 'SearchController@search') );
 Route::get('dashboard/results', array( 'as' => 'result','uses' => 'SearchController@results') );
+Route::post('dashboard/send-message',array('as'=>'viewModalWindow','uses'=>'MessagesController@modalWindow'));
+
+Route::get('search/results',array('as'=>'search-results','uses'=>'SearchController@results'));
+Route::post('messages/store',array('as'=>'message-store','uses'=>'MessagesController@store'));
 
 Route::get('api/dropdown/{table}','ApiController@dropdown');

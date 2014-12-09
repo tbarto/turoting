@@ -39,4 +39,50 @@ class MessagesController extends \BaseController {
 
         return Response::make($html);
 	}
+	/**
+	 * Tom/20141202
+	 * gets user's image and name for modal window
+	 *
+	 * @param post int id
+	 * @return html (for modal dialog box)
+	 */
+	public function modalWindow(){
+		
+		$input = Input::all();
+		$id = $input['id'];
+
+		$user = DB::table('profiles')->where('user_id','=',$id )->first();
+		
+
+		//make html for modal
+		$html = View::make('utility.modalWindow')
+			->with('user',$user)
+			->render();
+
+		return Response::make($html);
+
+	}
+	/**
+	 * Store a newly created message.
+	 * POST /messages
+	 *
+	 * @return Response
+	 */
+	public function store()
+	{
+		$input = Input::all();
+
+		$newMessage = new Message;
+		$newMessage->from_id = $input['from_id'];
+		$newMessage->user_id = $input['to_id'];
+		$newMessage->content = $input['message'];
+		$newMessage->read=false;
+		$newMessage->save();
+
+		$message = "Message Sent!";
+
+		return $message;
+
+	}
+
 }

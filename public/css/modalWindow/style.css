@@ -1,0 +1,6 @@
+.loader{
+	background-image: url(/tutor2/public/images/ajax-loader.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100px;
+}

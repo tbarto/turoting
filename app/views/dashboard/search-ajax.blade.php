@@ -1,5 +1,5 @@
 <div class="col-md-8 col-md-offset-2">
-	{{ Form::open( array( 'id'=> 'searchForm', 'method'=>'get', 'role'=>'form', 'data-target' => URL::route('result') ) ) }}
+	{{ Form::open( array( 'id'=> 'searchForm', 'method'=>'get', 'role'=>'form', 'data-target' => URL::route('search-results') ) ) }}
 	            <div class="form-group">
 	                
 	                <label for='category'>Select a category</label>
