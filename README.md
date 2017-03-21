@@ -3,6 +3,7 @@ A 'social network' example based in Seoul, Korea with the purpose of students fi
 
 ## How it's made
 **Tech used:** PHP, Laravel, MySQL, Google maps API
+
 This was our first-time use of the Laravel framework for PHP. Laravel has a lot of similar features as Rails.
 
 ## Improvements
